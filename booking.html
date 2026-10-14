@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervēt ekskursiju — Smile Line</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-xl shadow-md">😊</div>
+                        <span class="text-2xl font-extrabold tracking-tight text-slate-900">Smile Line</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-amber-600 transition">Sākums</a>
+                    <a href="about.html" class="text-slate-600 hover:text-amber-600 transition">Par mums</a>
+                    <a href="services.html" class="text-slate-600 hover:text-amber-600 transition">Ekskursijas</a>
+                    <a href="gallery.html" class="text-slate-600 hover:text-amber-600 transition">Galerija</a>
+                    <a href="contacts.html" class="text-slate-600 hover:text-amber-600 transition">Kontakti</a>
+                    <a href="booking.html" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-lg shadow-amber-500/30 transition transform hover:-translate-y-0.5">Rezervēt</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <a href="booking.html" class="bg-amber-500 text-white px-4 py-2 rounded-xl text-sm font-medium">Rezervēt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-slate-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl font-black mb-3">Ekskursijas Rezervācija</h1>
+            <p class="text-slate-300">Aizpildiet formu, un mēs ar jums sazināsimies, lai apstiprinātu rezervāciju.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <form action="https://formsubmit.co/info@smileline.lv" method="POST">
+                    <!-- Formsubmit config -->
+                    <input type="hidden" name="_subject" value="Jauna rezervācija no Smile Line mājaslapas!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Vārds</label>
+                            <input type="text" name="Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Tālrunis</label>
+                            <input type="tel" name="Phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">E-pasts</label>
+                            <input type="email" name="Email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Izvēlētā pakalpojums / ekskursija</label>
+                            <select name="Service" id="tour-select" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition bg-white">
+                                <option value="Vecrīgas pastaigu ekskursija">Vecrīgas pastaigu ekskursija (no 20 €)</option>
+                                <option value="Rīgas Centrāltirgus gardumu tūre">Rīgas Centrāltirgus gardumu tūre (no 37 €)</option>
+                                <option value="Rīgas Jūgendstila arhitektūra">Rīgas Jūgendstila arhitektūra (no 25 €)</option>
+                                <option value="Padomju Rīgas stāsti">Padomju Rīgas stāsti (no 30 €)</option>
+                                <option value="Krusta kalns Lietuvā">Krusta kalns Lietuvā & Jelgava (no 39 €)</option>
+                                <option value="Sigulda – Latvijas Šveice">Sigulda – Latvijas Šveice (no 95 €)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Datums</label>
+                            <input type="date" name="Date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Laiks</label>
+                            <input type="time" name="Time" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Viesu skaits</label>
+                            <input type="number" name="Guests" min="1" value="2" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Papildu komentārs vai jautājums</label>
+                        <textarea name="Comment" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-amber-500/30 transition text-lg">
+                        Apstiprināt Rezervāciju
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script to preselect tour from URL -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const tour = urlParams.get('tour');
+        if (tour) {
+            const select = document.getElementById('tour-select');
+            for (let option of select.options) {
+                if (option.value.toLowerCase().includes(tour.toLowerCase()) || option.text.toLowerCase().includes(tour.toLowerCase())) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold">😊</div>
+                    <span class="text-xl font-bold text-white">Smile Line</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-4">Profesionāla tūrisma aģentūra Rīgā. Ekskursijas, transferi un individuālas programmas visā Latvijā.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Kontakti</h4>
+                <p class="text-sm mb-2">📍 Rātslaukums 7, Centra rajons, Rīga, LV-1050</p>
+                <p class="text-sm mb-2">📞 +371 29542626</p>
+                <p class="text-sm mb-2">✉️ info@smileline.lv</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Sociālie tīkli</h4>
+                <div class="flex space-x-4 mb-4">
+                    <a href="https://www.instagram.com/smilelinetours/" target="_blank" class="bg-slate-800 hover:bg-amber-500 hover:text-white p-3 rounded-full transition">Instagram</a>
+                    <a href="https://www.facebook.com/travelagencysmileline/" target="_blank" class="bg-slate-800 hover:bg-amber-500 hover:text-white p-3 rounded-full transition">Facebook</a>
+                </div>
+                <p class="text-xs text-slate-500">© 2026 Smile Line. Visas tiesības aizsargātas.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
